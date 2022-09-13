@@ -4,7 +4,7 @@
 //
 //  Created by Emine CETINKAYA on 13.09.2022.
 //
-//Daily Work
+//Daily Work 2
 
 import SwiftUI
 
