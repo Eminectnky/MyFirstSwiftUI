@@ -12,6 +12,7 @@
 		FE97BBB728D099E5006B7FE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE97BBB628D099E5006B7FE1 /* Assets.xcassets */; };
 		FE97BBBA28D099E5006B7FE1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE97BBB928D099E5006B7FE1 /* Preview Assets.xcassets */; };
 		FE97BBC128D0BCA6006B7FE1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE97BBC028D0BCA6006B7FE1 /* LaunchScreen.storyboard */; };
+		FEC122BD28D27565003A149B /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC122BC28D27565003A149B /* Game.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		FE97BBB628D099E5006B7FE1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FE97BBB928D099E5006B7FE1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FE97BBC028D0BCA6006B7FE1 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FEC122BC28D27565003A149B /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 			children = (
 				FE97BBB228D099E2006B7FE1 /* MyFirstSwiftUIApp.swift */,
 				FE97BBB428D099E2006B7FE1 /* ContentView.swift */,
+				FEC122BC28D27565003A149B /* Game.swift */,
 				FE97BBB628D099E5006B7FE1 /* Assets.xcassets */,
 				FE97BBC028D0BCA6006B7FE1 /* LaunchScreen.storyboard */,
 				FE97BBB828D099E5006B7FE1 /* Preview Content */,
@@ -142,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE97BBB528D099E2006B7FE1 /* ContentView.swift in Sources */,
+				FEC122BD28D27565003A149B /* Game.swift in Sources */,
 				FE97BBB328D099E2006B7FE1 /* MyFirstSwiftUIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
