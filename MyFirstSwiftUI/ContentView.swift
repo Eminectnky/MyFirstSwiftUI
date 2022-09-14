@@ -3,34 +3,49 @@
 //  MyFirstSwiftUI
 //
 //  Created by Emine CETINKAYA on 13.09.2022.
-//
-//Daily Work 6
+
+//project updated
 
 import SwiftUI
 
 struct ContentView: View {
     
-   @State var isTurkish: Bool = false
+    @State var fahrenheitValue: String = ""
     
-    var body: some View {
-        VStack{
-            if isTurkish{
-                Text("Merhaba, dünya!")
-                
-            }else{
-                Text("Hello, world!")
-                
-            }
+    func convertToCelsius() -> String {
+        
+        if let value = Double(fahrenheitValue) {
             
+            let fahrenheit = Measurement<UnitTemperature>(value: value, unit: .fahrenheit)
             
-            Button(action: {
-                self.isTurkish.toggle()},label: {
-                    Text(isTurkish ? "Hello" : "Merhaba")
-            })
+            let celciusValue = fahrenheit .converted(to:.celsius)
+            
+           return "\(celciusValue.value)"
+        }else {
+            return"???"
         }
+        
+       
+        
+        
+    }
+    var body: some View {
+        VStack {
+            TextField("value", text: $fahrenheitValue)
+            .font(Font.system(size: 64.0))
+            multilineTextAlignment(.center)
+            Text("fahrenheit")
+            Text("is actually")
+                .foregroundColor(.gray)
+            Text(self.fahrenheitValue.isEmpty ? "???" : self.fahrenheitValue)
+                .font(Font.system(size: 64.0))
+            Text("degrees Celcius")
+            Spacer()
+        }
+        
+        .foregroundColor(.orange)
         .font(.title)
-        
-        
+       
     }
 }
 
@@ -39,3 +54,4 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
