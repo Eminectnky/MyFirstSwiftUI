@@ -6,11 +6,24 @@
 
 //project updated
 
+// number formatter added
+
 import SwiftUI
 
 struct ContentView: View {
     
     @State var fahrenheitValue: String = ""
+    
+    let numberFormatter: NumberFormatter = {
+        
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .decimal
+        numberFormatter.minimumFractionDigits = 0
+        numberFormatter.maximumFractionDigits = 2
+        return numberFormatter
+        
+        
+    } ()
     
     func convertToCelsius() -> String {
         
@@ -37,7 +50,7 @@ struct ContentView: View {
             Text("fahrenheit")
             Text("is actually")
                 .foregroundColor(.gray)
-            Text(self.fahrenheitValue.isEmpty ? "???" : self.fahrenheitValue)
+            Text(convertToCelsius())
                 .font(Font.system(size: 64.0))
             Text("degrees Celcius")
             Spacer()
