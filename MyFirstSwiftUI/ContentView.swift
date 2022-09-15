@@ -10,10 +10,32 @@ import SwiftUI
 
 
 struct ContentView: View {
+    
+    let gameStore = GameStore()
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        List(gameStore.games){ (game) in
+            
+            HStack{
+                
+            
+                VStack(alignment:.leading){
+                Text(game.name)
+                      .font(.body)
+                Text(game.serialNumber)
+                        .font(.caption)
+                        .foregroundColor(Color(white: 0.65))
+                
+            }
+                Spacer()
+                Text("\(game.priceInDollars)")
+                    .font(.title2)
+            }
+            
+         
+        }
+   
     }
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
