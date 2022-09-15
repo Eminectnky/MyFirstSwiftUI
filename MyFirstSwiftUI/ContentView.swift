@@ -11,6 +11,18 @@ import SwiftUI
 
 struct ContentView: View {
     
+    let numberFormatter : NumberFormatter = {
+        
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        formatter.currencySymbol = "$"
+        formatter.currencyCode = "USD"
+        formatter.minimumFractionDigits = 0
+        formatter.maximumFractionDigits = 2
+        return formatter
+        
+    }()
+    
     let gameStore = GameStore()
     var body: some View {
         List(gameStore.games){ (game) in
@@ -18,7 +30,7 @@ struct ContentView: View {
             HStack{
                 
             
-                VStack(alignment:.leading){
+                VStack(alignment:.leading, spacing: 4.0){
                 Text(game.name)
                       .font(.body)
                 Text(game.serialNumber)
@@ -27,9 +39,12 @@ struct ContentView: View {
                 
             }
                 Spacer()
+                Text(NSNumber(value: game.priceInDollars), formatter: numberFormatter)
                 Text("\(game.priceInDollars)")
                     .font(.title2)
+                    .foregroundColor(game.priceInDollars > 30 ? .blue: .gray)
             }
+            .padding(.vertical , 6)
             
          
         }
