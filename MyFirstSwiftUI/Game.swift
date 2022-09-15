@@ -28,13 +28,14 @@ class Game : NSObject {
     
     convenience init (random : Bool = false){
         if random {
+            
             let conditions = ["New", "Mint", "Used"]
             
             var idx =  arc4random_uniform(UInt32(conditions.count))
             
             let randomCoundation = conditions[Int(idx)]
             
-           let names = ["Resident Evil", "Gears Of War", "Halo", "God of War"]
+            let names = ["Resident Evil", "Gears Of War", "Halo", "God of War"]
             
             idx =  arc4random_uniform(UInt32(names.count))
             
@@ -42,17 +43,15 @@ class Game : NSObject {
             
             idx =  arc4random_uniform(UInt32(6))
             
-            let randomTitle = "\(randomCondition) \(randomName) \(Int(idx))"
+            let randomTitle = "\(randomCoundation) \(randomName) \(Int(idx))"
             
             let serialNumber = UUID().uuidString.components(separatedBy: "-").first!
             
-            let priceInDollars =
+            let priceInDollars = Double(arc4random_uniform(UInt32(70)))
             
-            idx = UInt32(Double(arc4random_uniform(UInt32(70))))
+            self.init (name: randomTitle, priceInDollars: priceInDollars, serialNumber: serialNumber)
             
-            self.init(name : randomTitle , priceInDollars : priceInDollars , serialNumber : serialNumber)
-            
-        }else{
+        }else {
             self.init(name : "" , priceInDollars : 0 , serialNumber : "")
         }
         

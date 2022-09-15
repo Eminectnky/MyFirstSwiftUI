@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FE6ECE1428D32D4D00AB59E2 /* GameStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6ECE1328D32D4D00AB59E2 /* GameStore.swift */; };
 		FE97BBB328D099E2006B7FE1 /* MyFirstSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE97BBB228D099E2006B7FE1 /* MyFirstSwiftUIApp.swift */; };
 		FE97BBB528D099E2006B7FE1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE97BBB428D099E2006B7FE1 /* ContentView.swift */; };
 		FE97BBB728D099E5006B7FE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE97BBB628D099E5006B7FE1 /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FE6ECE1328D32D4D00AB59E2 /* GameStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStore.swift; sourceTree = "<group>"; };
 		FE97BBAF28D099E2006B7FE1 /* Hello.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hello.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE97BBB228D099E2006B7FE1 /* MyFirstSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFirstSwiftUIApp.swift; sourceTree = "<group>"; };
 		FE97BBB428D099E2006B7FE1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 				FE97BBB228D099E2006B7FE1 /* MyFirstSwiftUIApp.swift */,
 				FE97BBB428D099E2006B7FE1 /* ContentView.swift */,
 				FEC122BC28D27565003A149B /* Game.swift */,
+				FE6ECE1328D32D4D00AB59E2 /* GameStore.swift */,
 				FE97BBB628D099E5006B7FE1 /* Assets.xcassets */,
 				FE97BBC028D0BCA6006B7FE1 /* LaunchScreen.storyboard */,
 				FE97BBB828D099E5006B7FE1 /* Preview Content */,
@@ -145,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE97BBB528D099E2006B7FE1 /* ContentView.swift in Sources */,
+				FE6ECE1428D32D4D00AB59E2 /* GameStore.swift in Sources */,
 				FEC122BD28D27565003A149B /* Game.swift in Sources */,
 				FE97BBB328D099E2006B7FE1 /* MyFirstSwiftUIApp.swift in Sources */,
 			);
