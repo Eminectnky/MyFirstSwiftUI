@@ -11,6 +11,7 @@
 //Main VStack updated
 //HSatck Of Days updated
 //Button & Refactor added
+//Button & Refactor updated
 
 import SwiftUI
 struct ContentView: View {
@@ -19,23 +20,9 @@ struct ContentView: View {
             BackgroundView(topColor: .blue, bottomColor: Color("lightBlue"))
             
             VStack{
-                Text("Cupertino, CA")
-                    .font(.system(size: 32, weight: .medium, design: .default))
-                    .foregroundColor(.white)
-                    .padding()
+               CityTextView(cityName: "Cupertino, CA")
                 
-                VStack(spacing: 10){
-                    Image(systemName: "cloud.sun.fill")
-                        .renderingMode(.original)
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 180, height: 180)
-                    Text("76°")
-                        .font(.system(size: 70, weight: .medium))
-                        .foregroundColor(.white)
-                }
-                
-                .padding(.bottom, 40)
+               MainWeatherStatusView(imageName: "cloud.sun.fill", temperature: 76)
                 
                 HStack(spacing: 20){
                 
@@ -58,6 +45,7 @@ struct ContentView: View {
                 
                 }
                 Spacer()
+                
                 Button{
                 print("tapped")
                 
@@ -65,9 +53,9 @@ struct ContentView: View {
                 Text("Change Day Time")
                     .frame(width: 280, height: 50)
                     .background(Color.white)
-                    .font(.system (size: 20, weight: .bold, design: .default))
+                    .font(.system(size: 20, weight: .bold, design: .default))
                     .cornerRadius(10)
-                
+           
             }
              Spacer()
         }
@@ -141,8 +129,28 @@ struct WeatherDayView : View{
     }
     
 }
-                                
-                                
+
+struct MainWeatherStatusView: View {
+    
+    var imageName: String
+    var temperature: Int
+    
+    var body: some View {
+        VStack(spacing: 10){
+            Image(systemName: imageName)
+                .renderingMode(.original)
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 180, height: 180)
+            Text("\(temperature)°")
+                .font(.system(size: 70, weight: .medium))
+                .foregroundColor(.white)
+        }
+        
+        .padding(.bottom, 40)
+    }
+}
+                            
                             
     
     
